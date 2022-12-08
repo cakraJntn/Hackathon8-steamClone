@@ -164,6 +164,9 @@ function renderCart() {
                 <div>
                     <img class="ml-[30px]" src="./assets/images/x.svg" alt="delete-button">
                 </div>
+            </li> 
+            <li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer text-white :hover-text-[#4F76FF] font-bold text-lg">
+            Continue Checkout ->
             </li>`
         }
     }
