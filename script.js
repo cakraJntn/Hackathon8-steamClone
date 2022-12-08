@@ -12,6 +12,7 @@ function showCartBox() {
     dropdownCategory.add("hidden")
 }
 
+console.log(JSON.parse(localStorage.getItem("dataBase")), "akses dari local")
 
 let dataBase = [
     {
@@ -141,6 +142,12 @@ for (let i = 0; i < dataBase.length; i++) {
 function addToCart(index) {
     dataBase[index].cart = true;
     renderCart()
+    localStorage.setItem("dataBase", JSON.stringify(dataBase))
+}
+function deleteCart(index) {
+    dataBase[index].cart = false;
+    renderCart() 
+    localStorage.setItem("dataBase", JSON.stringify(dataBase))
 }
 
 const cartcheck = document.getElementById("cart-check")
@@ -148,37 +155,54 @@ const cartcheck = document.getElementById("cart-check")
 function renderCart() {
     let count = 0
     cartcheck.innerHTML = ""
-    for (let i = 0; i < dataBase.length; i++) {
-        const element = dataBase[i];
-        if (dataBase[i].cart === true) {
+    let data = []
+    if(localStorage.getItem("dataBase"))
+    {
+        data = JSON.parse(localStorage.getItem("dataBase"))
+    } else {
+        data = [...dataBase]
+    }
+    for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        if (data[i].cart === true) {
             count++
             cartcheck.innerHTML += ` <li class="flex items-center gap-[20px] py-[20px] pl-[20px] pr-[20px] cursor-pointer">
             <div class="w-[50px] h-[50px]">
-                <img class="h-full" src="./assets/gameCover/${dataBase[i].img}"
+                <img class="h-full" src="./assets/gameCover/${data[i].img}"
                     alt="gambar-thewitcher-cart">
             </div>
             <div>
-                <p >${dataBase[i].name}</p>
-                <p >Rp, ${dataBase[i].price}</p>
+                <p >${data[i].name}</p>
+                <p >Rp, ${data[i].price}</p>
                 </div>
                 <div>
-                    <img class="ml-[30px]" src="./assets/images/x.svg" alt="delete-button">
+                <a id="delete" onClick="deleteCart(${i})">
+                    <img  class="ml-[30px]" src="./assets/images/x.svg" alt="delete-button">
+                    </a>
                 </div>
             </li> 
-            <li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer text-white :hover-text-[#4F76FF] font-bold text-lg">
-            Continue Checkout ->
-            </li>`
+            `
         }
+
     }
+    
     if (count < 1) {
         cartcheck.innerHTML += ` <li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] cursor-pointer">
         <div>
                <h1>Belum ada yang dimasukkin ke cart</h1>
         </div>
     </li>`
+    } else {
+        cartcheck.innerHTML += `<li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer text-white :hover-text-[#4F76FF] font-bold text-lg">
+        <a href="checkout.html">Continue Checkout -> </a>
+          </li>`
     }
 }
 renderCart()
 
+
+
+
+// const modal= document.getElementById('modal')
 
 
