@@ -18,62 +18,73 @@ let dataBase = [
         name: "Grand Theft Auto VI",
         price: 800_000,
         category: "action",
-        img: "gta VI.jpg"
+        img: "gta VI.jpg",
+        cart:false
         
     },
     {
         name: "Resident Evil 4",
         price: 750_0000,
         category: "action",
-        img: "resident evil.jpg"
+        img: "resident evil.jpg",
+        cart:false
     },
     {
         name: "Uncharted: Legacy of Thieves Collection",
         price: 900_000,
         category: "adventure",
-        img: "uncharated.jpg"
+        img: "uncharated.jpg",
+        cart:false
+        
     },
     {
         name: "The Elder Scrolls V: Skyrim",
         price: 450_000,
         category: "RPG",
-        img: "the elder.jpg"
+        img: "the elder.jpg",
+        cart:false
     },
     {
         name: "Cyberpunk 2077",
         price: 950_000,
         category: "RPG",
-        img: "cyber punk.jpg"
+        img: "cyber punk.jpg",
+        cart:false
     },
     {
         name: "FIFA 22",
         price: 750_000,
         category: "sport",
-        img: "fifa 22.jpg"
+        img: "fifa 22.jpg",
+        cart:false
     },
     {
         name: "Tony Hawk's Pro Skater 1 + 2",
         price: 650_000,
         category: "sport",
-        img: "tony hawks.jpg"
+        img: "tony hawks.jpg",
+        cart:false
     },
     {
         name: "Red Dead Redemption 2",
         price: 0,
         category: "adventure",
-        img: "RDR.jpg"
+        img: "RDR.jpg",
+        cart:false
     },
     {
         name: "Horizon Zero Dawn",
         price: 350_000,
         category: "adventure",
-        img: "horizon.jpg"
+        img: "horizon.jpg",
+        cart:false
     },
     {
         name: "The Witcher 3",
         price: 560_000,
         category: "RPG",
-        img: "witcher.jpg"
+        img: "witcher.jpg",
+        cart:false
     }
 ]
 
@@ -121,11 +132,48 @@ for (let i = 0; i < dataBase.length; i++) {
     <div class="flex absolute bottom-[0px] right-[-1px]">
         <p
             class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
-            <button>Add to Cart</button>
+          
+            <button onclick="addToCart(${i})">Add to Cart</button>
         </p>
     </div>
 </div>`
 }
+function addToCart(index){
+    dataBase[index].cart=true;
+    renderCart()
+}
+
+const cartcheck=document.getElementById("cart-check")
+
+function renderCart() {
+    let count=0
+    cartcheck.innerHTML=""
+    for (let i = 0; i < dataBase.length; i++) {
+        const element = dataBase[i];
+        if(dataBase[i].cart===true)
+        {
+            count++
+            cartcheck.innerHTML+=` <li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] cursor-pointer">
+            <div class="w-[50px] h-[50px]">
+                <img class="h-full" src="./assets/gameCover/${dataBase[i].img}"
+                    alt="gambar-thewitcher-cart">
+            </div>
+            <div>
+                <p >${dataBase[i].name}</p>
+                <p >Rp, ${dataBase[i].price}</p>
+            </div>
+        </li>`
+        }
+    }
+    if(count<1){
+        cartcheck.innerHTML+=` <li class="flex gap-[20px] py-[20px] pl-[20px] pr-[60px] cursor-pointer">
+        <div>
+               <h1>Belum ada yang dimasukkin ke cart</h1>
+        </div>
+    </li>`
+    }
+}
+renderCart()
 
 
 
