@@ -111,7 +111,7 @@ for (let i = 0; i < dataBase.length; i++) {
     <div class="flex flex-col gap-[10px]">
         <div>
             <img class="${imgOutline}"
-                src="/assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+                src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
         </div>
         <div class="flex gap-[20px] text-white">
             <p class="font-bold"> ${dataBase[i].name}</p>
