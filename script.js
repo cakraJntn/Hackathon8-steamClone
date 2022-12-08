@@ -201,6 +201,180 @@ function renderCart() {
 renderCart()
 
 
+function showAdventure() {
+    gameEl.innerHTML = ""
+    for (let i = 0; i < dataBase.length; i++) {
+        if (dataBase[i].category === 'adventure') {
+            gameEl.innerHTML += `<div class="relative">
+    <div class="flex absolute top-[-1px] left-[-1px]">
+        <p class="inline-flex px-[20px] py-[10px] bg-[#C56456] text-white font-bold rounded-lg">
+            ${dataBase[i].category}
+        </p>
+    </div>
+    <div class="flex flex-col gap-[10px]">
+        <div>
+            <img class="outline rounded-[20px] outline-1 outline-[#C56456] shadow-[0px_3px_30px_-7px_#C56456]"
+                src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+        </div>
+        <div class="flex gap-[20px] text-white">
+            <p class="font-bold"> ${dataBase[i].name}</p>
+            <p>${dataBase[i].price}</p>
+        </div>
+    </div>
+    <div class="flex absolute bottom-[0px] right-[-1px]">
+        <p
+            class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
+          
+            <button onclick="addToCart(${i})">Add to Cart</button>
+        </p>
+    </div>
+    </div>`
+        } 
+    }
+}
+
+function showAction(){
+    gameEl.innerHTML = ""
+    for (let i = 0; i < dataBase.length; i++) {
+        if (dataBase[i].category === 'action') {
+            gameEl.innerHTML += `<div class="relative">
+    <div class="flex absolute top-[-1px] left-[-1px]">
+        <p class="inline-flex px-[20px] py-[10px] bg-[#C59F56] text-white font-bold rounded-lg">
+            ${dataBase[i].category}
+        </p>
+    </div>
+    <div class="flex flex-col gap-[10px]">
+        <div>
+            <img class="outline rounded-[20px] outline-1 outline-[#C59F56] shadow-[0px_3px_30px_-7px #C59F56]"
+                src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+        </div>
+        <div class="flex gap-[20px] text-white">
+            <p class="font-bold"> ${dataBase[i].name}</p>
+            <p>${dataBase[i].price}</p>
+        </div>
+    </div>
+    <div class="flex absolute bottom-[0px] right-[-1px]">
+        <p
+            class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
+          
+            <button onclick="addToCart(${i})">Add to Cart</button>
+        </p>
+    </div>
+</div>`
+        } 
+    }
+}
+
+
+function showRPG(){
+    gameEl.innerHTML = ""
+    for (let i = 0; i < dataBase.length; i++) {
+        if (dataBase[i].category === 'RPG') {
+            gameEl.innerHTML += `<div class="relative">
+    <div class="flex absolute top-[-1px] left-[-1px]">
+        <p class="inline-flex px-[20px] py-[10px] bg-[#9456C5] text-white font-bold rounded-lg">
+            ${dataBase[i].category}
+        </p>
+    </div>
+    <div class="flex flex-col gap-[10px]">
+        <div>
+            <img class="outline rounded-[20px] outline-1 outline-[#9456C5] shadow-[0px_3px_30px_-7px #9456C5]"
+                src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+        </div>
+        <div class="flex gap-[20px] text-white">
+            <p class="font-bold"> ${dataBase[i].name}</p>
+            <p>${dataBase[i].price}</p>
+        </div>
+    </div>
+    <div class="flex absolute bottom-[0px] right-[-1px]">
+        <p
+            class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
+          
+            <button onclick="addToCart(${i})">Add to Cart</button>
+        </p>
+    </div>
+</div>`
+        } 
+    }
+}
+
+function showSport(){
+    gameEl.innerHTML = ""
+    for (let i = 0; i < dataBase.length; i++) {
+        if (dataBase[i].category === 'sport') {
+            gameEl.innerHTML += `<div class="relative">
+    <div class="flex absolute top-[-1px] left-[-1px]">
+        <p class="inline-flex px-[20px] py-[10px] bg-[#56C561] text-white font-bold rounded-lg">
+            ${dataBase[i].category}
+        </p>
+    </div>
+    <div class="flex flex-col gap-[10px]">
+        <div>
+            <img class="outline rounded-[20px] outline-1 outline-[#56C561] shadow-[0px_3px_30px_-7px #56C561]"
+                src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+        </div>
+        <div class="flex gap-[20px] text-white">
+            <p class="font-bold"> ${dataBase[i].name}</p>
+            <p>${dataBase[i].price}</p>
+        </div>
+    </div>
+    <div class="flex absolute bottom-[0px] right-[-1px]">
+        <p
+            class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
+          
+            <button onclick="addToCart(${i})">Add to Cart</button>
+        </p>
+    </div>
+</div>`
+        } 
+    }
+}
+
+function backHome(){
+    gameEl.innerHTML = ""
+    for (let i = 0; i < dataBase.length; i++) {
+        let categoryColor
+        let imgOutline
+        if (dataBase[i].category === "adventure") {
+            imgOutline = "outline rounded-[20px] outline-1 outline-[#C56456] shadow-[0px_3px_30px_-7px_#C56456]"
+            categoryColor = "inline-flex px-[20px] py-[10px] bg-[#C56456] text-white font-bold rounded-lg"
+        } else if (dataBase[i].category === "action") {
+            imgOutline = "outline rounded-[20px] outline-1 outline-[#C59F56] shadow-[0px_3px_30px_-7px #C59F56]"
+            categoryColor = "inline-flex px-[20px] py-[10px] bg-[#C59F56] text-white font-bold rounded-lg"
+        } else if (dataBase[i].category === "sport") {
+            imgOutline = "outline rounded-[20px] outline-1 outline-[#56C561] shadow-[0px_3px_30px_-7px #56C561]"
+            categoryColor = "inline-flex px-[20px] py-[10px] bg-[#56C561] text-white font-bold rounded-lg"
+        } else {
+            imgOutline = "outline rounded-[20px] outline-1 outline-[#9456C5] shadow-[0px_3px_30px_-7px #9456C5]"
+            categoryColor = "inline-flex px-[20px] py-[10px] bg-[#9456C5] text-white font-bold rounded-lg"
+        }
+    
+        gameEl.innerHTML += `<div class="relative">
+        <div class="flex absolute top-[-1px] left-[-1px]">
+            <p class="${categoryColor}">
+                ${dataBase[i].category}
+            </p>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+            <div>
+                <img class="${imgOutline}"
+                    src="./assets/gameCover/${dataBase[i].img}" alt="gambar-thewitcher">
+            </div>
+            <div class="flex gap-[20px] text-white">
+                <p class="font-bold"> ${dataBase[i].name}</p>
+                <p>${dataBase[i].price}</p>
+            </div>
+        </div>
+        <div class="flex absolute bottom-[0px] right-[-1px]">
+            <p
+                class="inline-flex bg-[#4F76FF] text-white font-bold rounded-lg p-[20px] shadow-[0px_4px_18px_#4F76FF]">
+              
+                <button onclick="addToCart(${i})">Add to Cart</button>
+            </p>
+        </div>
+    </div>`
+}
+}
 
 
 // const modal= document.getElementById('modal')

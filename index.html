@@ -30,7 +30,7 @@
             <img class="flex w-[60px] h-[60px] rounded-[50%]" src="./assets/images/Unknown-1.png" alt="gambar-brand">
 
             <ul class="flex text-white gap-[50px]">
-                <li class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Home</li>
+                <li onclick="backHome()" class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Home</li>
                 <li id="menu-category" onclick="showCategoryBox()"
                     class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Category</li>
                 <li class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">About</li>
@@ -46,14 +46,14 @@
             <div id="dropdown-category" class="absolute top-[90px] right-[270px] z-10 hidden">
                 <ul
                     class="inline-flex p-[20px] flex-col border-2 w-auto bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
-                    <li class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">
+                    <li onclick="showAdventure()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">
                         Adventure
                     </li>
-                    <li class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Action
+                    <li onclick="showAction()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Action
                     </li>
-                    <li class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Role
+                    <li onclick="showRPG()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Role
                         Playing</li>
-                    <li class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Sport
+                    <li onclick="showSport()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Sport
                         &
                         Racing</li>
                 </ul>
