@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steam Clone</title>
+    <title>Gab8</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -39,28 +39,36 @@
 
 
             <div class="flex gap-[30px]">
-                <img id="menu-cart" onclick="showCartBox()" class="cursor-pointer" src="./assets/images/cart.png"
-                    class="h-[30px] w-auto" alt="">
+                <div class="relative">
+                    <!-- <div id="cart-length"
+                        class="flex items-center justify-center h-[20px] rounded-lg right-[-7px] top-[-7px] w-[20px] bg-white absolute text-white text-xs bg-red-600">
+                        1</div> -->
+                    <img id="menu-cart" onclick="showCartBox()" class="cursor-pointer" src="./assets/images/cart.png"
+                        class="h-[30px] w-auto" alt="">
+                </div>
                 <img src="./assets/images/user.png" class="h-[30px] w-auto" alt="">
             </div>
             <div id="dropdown-category" class="absolute top-[90px] right-[270px] z-10 hidden">
                 <ul
                     class="inline-flex p-[20px] flex-col border-2 w-auto bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
-                    <li onclick="showAdventure()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">
+                    <li onclick="showAdventure()"
+                        class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">
                         Adventure
                     </li>
-                    <li onclick="showAction()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Action
+                    <li onclick="showAction()"
+                        class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Action
                     </li>
-                    <li onclick="showRPG()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Role
-                        Playing</li>
-                    <li onclick="showSport()" class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Sport
-                        &
-                        Racing</li>
+                    <li onclick="showRPG()"
+                        class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">RPG
+                    </li>
+                    <li onclick="showSport()"
+                        class="py-[20px] pl-[20px] pr-[60px] hover:text-[#4F76FF] hover:font-bold cursor-pointer">Sport
+                    </li>
                 </ul>
             </div>
             <div id="dropdown-cart" class="absolute top-[90px] right-[80px] z-10 hidden">
-                <ul
-                   id="cart-check" class="inline-flex p-[20px] flex-col border-2 w-auto bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
+                <ul id="cart-check"
+                    class="flex p-[20px] flex-col border-2 bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
 
 
 
