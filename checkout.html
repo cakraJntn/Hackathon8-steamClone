@@ -37,15 +37,23 @@
             <ul
                 class="inline-flex p-[20px] flex-col border-2 w-[500px] bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
 
-                <div id="checkout-game">
-
+                <div id="box-checkout" class="">
+                    <div id="checkout-game">
+                    </div>
+                    <div id="totalPriceQty">
+                    </div>
                 </div>
 
-                <div id="totalPriceQty">
-
+                <div id="box-qrcode" class="flex flex-col px-[60px] py-[20px] gap-[20px] hidden">
+                    <img src="./assets/images/qr-gab8.png" alt="">
+                    <div class="flex flex-col gap-[5px]">
+                        <p class="text-center font-bold text-xl">Gab8 Coorporation</p>
+                        <p class="text-center">Jln. Yang lurus Desa Perjuangan Kecamatan Syukur, 19002 Jawa Barat</p>
+                    </div>
                 </div>
+
                 <div class="flex flex-col gap-[20px] py-[20px]">
-                    <li
+                    <li onclick="checkoutNow()" id="button-purchase"
                         class="flex bg-[#4F76FF] rounded-lg justify-center mx-[20px] p-[10px] cursor-pointer text-white font-bold text-lg">
                         <p class="text-white text-lg">Purchase Now</p>
                     </li>

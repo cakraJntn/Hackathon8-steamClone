@@ -1,6 +1,9 @@
 const dataBase = JSON.parse(localStorage.getItem("dataBase"))
 
 const purchasedGame = document.getElementById("checkout-game")
+const boxCheckout = document.getElementById("box-checkout")
+const boxQRCode = document.getElementById("box-qrcode")
+const buttonPurchase = document.getElementById("button-purchase")
 
 const totalPriceQty = document.getElementById("totalPriceQty")
 
@@ -30,5 +33,13 @@ for (let i = 0; i < dataBase.length; i++) {
     <p class="text-lg">${totalPrice}</p>
 </li>`
     }
+}
+
+
+function checkoutNow() {
+    console.log(`terklik`)
+    boxCheckout.classList.add("hidden")
+    buttonPurchase.classList.add("hidden")
+    boxQRCode.classList.remove("hidden")
 }
 
