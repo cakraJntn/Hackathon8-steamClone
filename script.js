@@ -220,7 +220,7 @@ function showAdventure() {
         </div>
         <div class="flex gap-[20px] text-white">
             <p class="font-bold"> ${dataBase[i].name}</p>
-            <p>${dataBase[i].price}</p>
+            <p>Rp ${dataBase[i].price}</p>
         </div>
     </div>
     <div class="flex absolute bottom-[0px] right-[-1px]">
@@ -252,7 +252,7 @@ function showAction() {
         </div>
         <div class="flex gap-[20px] text-white">
             <p class="font-bold"> ${dataBase[i].name}</p>
-            <p>${dataBase[i].price}</p>
+            <p>Rp ${dataBase[i].price}</p>
         </div>
     </div>
     <div class="flex absolute bottom-[0px] right-[-1px]">
@@ -285,7 +285,7 @@ function showRPG() {
         </div>
         <div class="flex gap-[20px] text-white">
             <p class="font-bold"> ${dataBase[i].name}</p>
-            <p>${dataBase[i].price}</p>
+            <p>Rp ${dataBase[i].price}</p>
         </div>
     </div>
     <div class="flex absolute bottom-[0px] right-[-1px]">
@@ -317,7 +317,7 @@ function showSport() {
         </div>
         <div class="flex gap-[20px] text-white">
             <p class="font-bold"> ${dataBase[i].name}</p>
-            <p>${dataBase[i].price}</p>
+            <p>Rp ${dataBase[i].price}</p>
         </div>
     </div>
     <div class="flex absolute bottom-[0px] right-[-1px]">
@@ -364,7 +364,7 @@ function backHome() {
             </div>
             <div class="flex gap-[20px] text-white">
                 <p class="font-bold"> ${dataBase[i].name}</p>
-                <p>${dataBase[i].price}</p>
+                <p>Rp ${dataBase[i].price}</p>
             </div>
         </div>
         <div class="flex absolute bottom-[0px] right-[-1px]">
