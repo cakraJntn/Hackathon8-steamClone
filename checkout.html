@@ -27,29 +27,42 @@
 <body class="flex justify-center bg-[#101017]" style="font-family: 'Inter', sans-serif;">
     <div class="flex flex-col w-[770px] ">
         <header class="relative gap-[20px] flex justify-center w-full p-[30px] items-center bg-[#101017]">
-            <img class="flex w-[60px] h-[60px] rounded-[50%]" src="./assets/images/Unknown-1.png" alt="gambar-brand">
+            <a href="index.html">
+                <img class="flex w-[60px] h-[60px] rounded-[50%]" src="./assets/images/Unknown-1.png"
+                    alt="gambar-brand">
+            </a>
             <p class="text-white font-bold text-xl">Final Checkout</p>
         </header>
         <main class="flex justify-center py-[50px] bg-[#101017]">
             <ul
-                class="inline-flex p-[20px] flex-col border-2 w-auto bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
+                class="inline-flex p-[20px] flex-col border-2 w-[500px] bg-[#16161F] text-white rounded-xl border-[#A8BBFF]/[0.30] border">
 
-                <div id="checkout-game">
+                <div id="box-checkout" class="">
+                    <div id="checkout-game">
+                    </div>
+                    <div id="totalPriceQty">
+                    </div>
+                </div>
 
+                <div id="box-qrcode" class="flex flex-col px-[60px] py-[20px] gap-[20px] hidden">
+                    <img src="./assets/images/qr-gab8.png" alt="">
+                    <div class="flex flex-col gap-[5px]">
+                        <p class="text-center font-bold text-xl">Gab8 Coorporation</p>
+                        <p class="text-center">Jln. Yang lurus Desa Perjuangan Kecamatan Syukur, 19002 Jawa Barat</p>
+                    </div>
                 </div>
-            
-                <div id="totalPriceQty">
-                    
-                </div>
+
                 <div class="flex flex-col gap-[20px] py-[20px]">
-                    <li
+                    <li onclick="checkoutNow()" id="button-purchase"
                         class="flex bg-[#4F76FF] rounded-lg justify-center mx-[20px] p-[10px] cursor-pointer text-white font-bold text-lg">
                         <p class="text-white text-lg">Purchase Now</p>
                     </li>
                     <li
                         class="flex bg-white rounded-lg justify-center mx-[20px] p-[10px] cursor-pointer text-white font-bold text-lg">
-                       
-                        <a href="index.html"> <p class="text-[#4F76FF] text-lg">Cancel</p></a>
+
+                        <a href="index.html">
+                            <p class="text-[#4F76FF] text-lg">Cancel</p>
+                        </a>
                     </li>
                 </div>
             </ul>
