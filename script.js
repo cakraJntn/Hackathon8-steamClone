@@ -109,7 +109,7 @@ for (let i = 0; i < dataBase.length; i++) {
         imgOutline = "outline rounded-[20px] outline-1 outline-[#56C561] shadow-[0px_3px_30px_-7px #56C561]"
         categoryColor = "inline-flex px-[20px] py-[10px] bg-[#56C561] text-white font-bold rounded-lg"
     } else {
-        imgOutline = "outline rounded-[20px] outline-1 outline-[#9456C5] shadow-[0px_3px_30px_-7px #9456C5]"
+        imgOutline = "shadow-[0px_3px_30px_-7px #9456C5]"
         categoryColor = "inline-flex px-[20px] py-[10px] bg-[#9456C5] text-white font-bold rounded-lg"
     }
 
@@ -180,5 +180,16 @@ function renderCart() {
 }
 renderCart()
 
+let mainhomeEl = document.getElementById("main-home")
+let aboutEl =document.getElementById("about-page")
 
+function hiddenMain(){
+    mainhomeEl.classList.add("hidden")
+    aboutEl.classList.remove("hidden")
+}
+
+function showHome(){
+    mainhomeEl.classList.remove("hidden")
+    aboutEl.classList.add("hidden")
+}
 
