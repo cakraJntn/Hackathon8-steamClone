@@ -12,8 +12,6 @@ function showCartBox() {
     dropdownCategory.add("hidden")
 }
 
-console.log(JSON.parse(localStorage.getItem("dataBase")), "akses dari local")
-
 let dataBase = [
     {
         name: "Grand Theft Auto VI",
@@ -68,7 +66,7 @@ let dataBase = [
     },
     {
         name: "Red Dead Redemption 2",
-        price: 0,
+        price: 750_000,
         category: "adventure",
         img: "RDR.jpg",
         cart: false
@@ -86,6 +84,76 @@ let dataBase = [
         category: "RPG",
         img: "witcher.jpg",
         cart: false
+    },
+    {
+        name: "2K22",
+        price: 560_500,
+        category: "sport",
+        img: "2k22.jpg",
+        cart:false
+    },
+    {
+        name: "Assasin Valhalla",
+        price: 375_000,
+        category: "adventure",
+        img: "assassins.jpg",
+        cart:false
+    },
+    {
+        name: "Marvel",
+        price: 150_000,
+        category: "adventure",
+        img: "marvel.jpg",
+        cart:false
+    },
+    {
+        name: "MASS 3",
+        price: 350_000,
+        category: "adventure",
+        img: "mass3.jpg",
+        cart:false
+    },
+    {
+        name: "New World",
+        price: 560_000,
+        category: "RPG",
+        img: "newworld.jpg",
+        cart:false
+    },
+    {
+        name: "PUBG",
+        price: 350_000,
+        category: "adventure",
+        img: "pubg.jpg",
+        cart:false
+    },
+    {
+        name: "Session",
+        price: 560_000,
+        category: "RPG",
+        img: "session.jpg",
+        cart:false
+    },
+    {
+        name: "Sniper ELITE",
+        price: 560_000,
+        category: "RPG",
+        img: "sniper.jpg",
+        cart:false
+    },
+    {
+        name: "Tower Of Fantasy",
+        price: 350_000,
+        category: "adventure",
+        img: "tof.jpg",
+        cart:false
+    },
+    {
+        name: "UNDECEMBER",
+        price: 560_000,
+        category: "RPG",
+        img: "undecember.jpg",
+        cart:false
     }
 ]
 
@@ -141,13 +209,13 @@ for (let i = 0; i < dataBase.length; i++) {
 }
 function addToCart(index) {
     dataBase[index].cart = true;
-    renderCart()
     localStorage.setItem("dataBase", JSON.stringify(dataBase))
+    renderCart()
 }
 function deleteCart(index) {
     dataBase[index].cart = false;
-    renderCart() 
     localStorage.setItem("dataBase", JSON.stringify(dataBase))
+    renderCart() 
 }
 
 const cartcheck = document.getElementById("cart-check")
