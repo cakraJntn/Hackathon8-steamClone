@@ -27,13 +27,13 @@
 <body class="flex justify-center bg-[#101017]" style="font-family: 'Inter', sans-serif;">
     <div class="flex flex-col w-[770px]">
         <header class="relative flex justify-between w-full p-[30px] items-center bg-[#101017]">
-            <img class="flex w-[60px] h-[60px] rounded-[50%]" src="./assets/images/Unknown-1.png" alt="gambar-brand">
+            <img onclick="showHome()" class="flex w-[60px] h-[60px] rounded-[50%]" src="./assets/images/Unknown-1.png" alt="gambar-brand">
 
             <ul class="flex text-white gap-[50px]">
                 <li onclick="backHome()" class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Home</li>
                 <li id="menu-category" onclick="showCategoryBox()"
                     class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Category</li>
-                <li class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">About</li>
+                <li onclick="hiddenMain()"  class="hover:text-[#4F76FF] hover:font-bold cursor-pointer" >About</li>
                 <li class="hover:text-[#4F76FF] hover:font-bold cursor-pointer">Support</li>
             </ul>
 
@@ -75,7 +75,15 @@
                 </ul>
             </div>
         </header>
-        <main class="flex justify-center py-[50px] bg-[#101017]">
+        <div class="text-white">
+            <main class="flex justify-center py-[50px] bg-[#101017] hidden flex-col gap-[20px]" id="about-page"> 
+               <h1 class="text-6xl font-medium italic text-center">Gabe8</h1>
+               <p class="text-center leading-9  rounded-[40px] bg-[#1b2838] ">Gabe8 adalah platform distribusi digital dengan pilihan permainan top recommended, filosofi kami adalah "Anda membelinya, Anda memilikinya", Saat Anda bersama kami, Anda dapat yakin bahwa semua game berguaranteed original dan atas pembelian Anda secara langsung mendukung pemilik dan pembuat game yang sah. Kami membuat perbedaan cara Anda membeli dan bermain game, dengan kebebasan memilih dan pengalaman tanpa kerumitan dengan UI/UX yang GGGAMEING ADIKS ADIKS. MAAF SEBELUMNYA yang buat tampilan ini ga bisa css</p>
+               <img src="/Hackathon8-steamClone/assets/images/Gabenthrowmoney.gif" class="width-[50px] height[10px]" >
+            </main>
+            <img src="" alt="">
+        </div>
+        <main class="flex justify-center py-[50px] bg-[#101017]" id="main-home">
             <div id="gameCard" class="grid grid-cols-1 gap-[50px]">
             </div>
         </main>

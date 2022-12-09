@@ -13,6 +13,7 @@ function showCartBox() {
     dropdownCategory.add("hidden")
 }
 
+
 let dataBase = [
     {
         name: "Grand Theft Auto VI",
@@ -226,6 +227,7 @@ function renderCart() {
     let count = 0
     cartcheck.innerHTML = ""
     let data = []
+    console.log("triggereds")
     if (localStorage.getItem("dataBase")) {
         data = JSON.parse(localStorage.getItem("dataBase"))
     } else {
@@ -447,6 +449,17 @@ function backHome() {
     }
 }
 
+let mainhomeEl = document.getElementById("main-home")
+let aboutEl =document.getElementById("about-page")
 
+function hiddenMain(){
+    mainhomeEl.classList.add("hidden")
+    aboutEl.classList.remove("hidden")
+}
+
+function showHome(){
+    mainhomeEl.classList.remove("hidden")
+    aboutEl.classList.add("hidden")
+}
 // const modal= document.getElementById('modal')
 
